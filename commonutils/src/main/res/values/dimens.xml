@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright (c) 2016.
+  ~  Nirav Tukadiya
+  ~  Programmer Analyst ( Android)
+  ~  Meditab Software Inc.
+  -->
+
+<resources>
+    <dimen name="cu_scale_1dp">1dp</dimen>
+    <dimen name="cu_scale_2dp">2dp</dimen>
+    <dimen name="cu_scale_3dp">3dp</dimen>
+    <dimen name="cu_scale_4dp">4dp</dimen>
+    <dimen name="cu_scale_5dp">5dp</dimen>
+    <dimen name="cu_scale_6dp">6dp</dimen>
+    <dimen name="cu_scale_7dp">7dp</dimen>
+    <dimen name="cu_scale_8dp">8dp</dimen>
+    <dimen name="cu_scale_9dp">9dp</dimen>
+    <dimen name="cu_scale_10dp">10dp</dimen>
+    <dimen name="cu_scale_15dp">15dp</dimen>
+    <dimen name="cu_scale_16dp">16dp</dimen>
+    <dimen name="cu_scale_20dp">20dp</dimen>
+    <dimen name="cu_scale_24dp">24dp</dimen>
+    <dimen name="cu_scale_25dp">25dp</dimen>
+    <dimen name="cu_scale_30dp">30dp</dimen>
+    <dimen name="cu_scale_35dp">35dp</dimen>
+    <dimen name="cu_scale_40dp">40dp</dimen>
+    <dimen name="cu_scale_45dp">45dp</dimen>
+    <dimen name="cu_scale_50dp">50dp</dimen>
+    <dimen name="cu_scale_55dp">55dp</dimen>
+    <dimen name="cu_scale_60dp">60dp</dimen>
+    <dimen name="cu_scale_65dp">65dp</dimen>
+    <dimen name="cu_scale_70dp">70dp</dimen>
+    <dimen name="cu_scale_75dp">75dp</dimen>
+    <dimen name="cu_scale_80dp">80dp</dimen>
+    <dimen name="cu_scale_85dp">85dp</dimen>
+    <dimen name="cu_scale_90dp">90dp</dimen>
+    <dimen name="cu_scale_95dp">95dp</dimen>
+    <dimen name="cu_scale_100dp">100dp</dimen>
+    <dimen name="cu_scale_110dp">110dp</dimen>
+    <dimen name="cu_scale_120dp">120dp</dimen>
+    <dimen name="cu_scale_130dp">130dp</dimen>
+    <dimen name="cu_scale_140dp">140dp</dimen>
+    <dimen name="cu_scale_150dp">150dp</dimen>
+    <dimen name="cu_scale_160dp">160dp</dimen>
+    <dimen name="cu_scale_170dp">170dp</dimen>
+    <dimen name="cu_scale_180dp">180dp</dimen>
+    <dimen name="cu_scale_190dp">190dp</dimen>
+    <dimen name="cu_scale_200dp">200dp</dimen>
+    <dimen name="cu_scale_380dp">380dp</dimen>
+    <dimen name="cu_scale_460dp">460dp</dimen>
+
+    <dimen name="cu_text_scale_10sp">10sp</dimen>
+    <dimen name="cu_text_scale_11sp">11sp</dimen>
+    <dimen name="cu_text_scale_12sp">12sp</dimen>
+    <dimen name="cu_text_scale_13sp">13sp</dimen>
+    <dimen name="cu_text_scale_14sp">14sp</dimen>
+    <dimen name="cu_text_scale_15sp">15sp</dimen>
+    <dimen name="cu_text_scale_16sp">16sp</dimen>
+    <dimen name="cu_text_scale_17sp">17sp</dimen>
+    <dimen name="cu_text_scale_18sp">18sp</dimen>
+    <dimen name="cu_text_scale_19sp">19sp</dimen>
+    <dimen name="cu_text_scale_20sp">20sp</dimen>
+    <dimen name="cu_text_scale_21sp">21sp</dimen>
+    <dimen name="cu_text_scale_22sp">22sp</dimen>
+    <dimen name="cu_text_scale_23sp">23sp</dimen>
+    <dimen name="cu_text_scale_24sp">24sp</dimen>
+    <dimen name="cu_text_scale_25sp">25sp</dimen>
+    <dimen name="cu_text_scale_26sp">26sp</dimen>
+    <dimen name="cu_text_scale_27sp">27sp</dimen>
+    <dimen name="cu_text_scale_28sp">28sp</dimen>
+    <dimen name="cu_text_scale_29sp">29sp</dimen>
+    <dimen name="cu_text_scale_30sp">30sp</dimen>
+</resources>

@@ -1,0 +1,12 @@
+<!--
+  ~ Copyright (c) 2016.
+  ~  Nirav Tukadiya
+  ~  Programmer Analyst ( Android)
+  ~  Meditab Software Inc.
+  -->
+
+<resources>
+    <string name="app_name"></string>
+    <string name="alertDefaultTitle">@string/app_name</string>
+    <string name="alertDefaultButtonText">Ok</string>
+</resources>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?><!--
+  ~ Copyright (c) 2016.
+  ~  Nirav Tukadiya
+  ~  Programmer Analyst ( Android)
+  ~  Meditab Software Inc.
+  -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+
+    <size
+        android:width="0.5dp"
+        android:height="0.5dp" />
+
+    <solid android:color="@android:color/darker_gray" />
+
+</shape>

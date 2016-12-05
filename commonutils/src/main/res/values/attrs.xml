@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="PagerSlidingTabStrip">
+        <attr name="indicatorColor" format="color"/>
+        <attr name="text_Color" format="color"/>
+        <attr name="underlineColor" format="color"/>
+        <attr name="dividerColor" format="color"/>
+        <attr name="indicatorHeight" format="dimension"/>
+        <attr name="underlineHeight" format="dimension"/>
+        <attr name="dividerPadding1" format="dimension"/>
+        <attr name="tabPaddingLeftRight" format="dimension"/>
+        <attr name="scrollOffset" format="dimension"/>
+        <attr name="ptabBackground" format="reference"/>
+        <attr name="shouldExpand" format="boolean"/>
+        <attr name="textAllCaps1" format="boolean"/>
+    </declare-styleable>
+
+
+
+    <declare-styleable name="EasyRecyclerView">
+        <attr name="enableSwipeToRefresh" format="boolean"></attr>
+        <attr name="enableLoadMore" format="boolean"></attr>
+        <attr name="loadingText" format="string"></attr>
+        <attr name="noDataMessage" format="string"></attr>
+        <attr name="retryText" format="string"></attr>
+        <attr name="retryIcon" format="integer"></attr>
+        <attr name="setDefaultItemAnimator" format="boolean"></attr>
+        <attr name="setDefaultItemDecoration" format="boolean"></attr>
+
+    </declare-styleable>
+</resources>
