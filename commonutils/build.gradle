@@ -8,6 +8,33 @@
 apply plugin: 'com.android.library'
 apply plugin: 'com.neenbedankt.android-apt'
 
+ext {
+    bintrayRepo = 'maven'
+    bintrayName = 'common-utils'
+
+    publishedGroupId = 'com.meditab.commonutils'
+    libraryName = 'CommonUtils'
+    artifact = 'common-utils'
+
+    libraryDescription = 'A library for the common components being used in meditab.'
+
+    siteUrl = 'http://mgit.meditab.local/Devmobtl/commonutils-android'
+    gitUrl = 'http://mgit.meditab.local/Devmobtl/commonutils-android.git'
+
+    libraryVersion = '1.0'
+
+    developerId = 'miteshpithadiya'
+    developerName = 'Mitesh Pithadiya'
+    developerEmail = 'miteshvanp@hotmail.com'
+
+    licenseName = 'The Apache Software License, Version 2.0'
+    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+    allLicenses = ["Apache-2.0"]
+}
+
+def siteUrl = 'http://mgit.meditab.local/Devmobtl/commonutils-android'
+def gitUrl = 'http://mgit.meditab.local/Devmobtl/commonutils-android.git'
+
 android {
     compileSdkVersion 23
     buildToolsVersion "23.0.2"
@@ -22,6 +49,63 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+Properties properties = new Properties()
+properties.load(project.rootProject.file('local.properties').newDataInputStream())
+
+apply plugin: 'com.jfrog.bintray'
+
+version = "1.0"
+
+bintray {
+    user = properties.getProperty("bintray.user")
+    key = properties.getProperty("bintray.apikey")
+
+    configurations = ['archives']
+    pkg {
+        repo = "maven"
+        name = "CommonUtils"
+        websiteUrl = siteUrl
+        vcsUrl = gitUrl
+        licenses = ["Apache-2.0"]
+        publish = true
+    }
+}
+
+apply plugin: 'com.github.dcendents.android-maven'
+
+group = "com.meditab.commonutils"
+
+install {
+    repositories.mavenInstaller {
+        pom {
+            project {
+                packaging 'aar'
+                name 'A library for common components.'
+                url siteUrl
+                licenses {
+                    license {
+                        name 'The Apache Software License, Version 2.0'
+                        url 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+                    }
+                }
+                developers {
+                    developer {
+                        id 'miteshpithadiya'
+                        name 'Mitesh Pithadiya'
+                        email 'miteshvanp@hotmail.com'
+                    }
+                }
+                scm {
+                    connection gitUrl
+                    developerConnection gitUrl
+                    url siteUrl
+
+                }
+            }
         }
     }
 }
@@ -47,4 +131,27 @@ dependencies {
     compile 'com.google.firebase:firebase-core:9.4.0'
     compile 'com.google.firebase:firebase-messaging:9.4.0'
     compile 'com.google.android.gms:play-services-base:9.4.0'
+}
+
+task sourcesJar(type: Jar) {
+    from android.sourceSets.main.java.srcDirs
+    classifier = 'sources'
+}
+
+task javadoc(type: Javadoc) {
+    source = android.sourceSets.main.java.srcDirs
+    classpath += project.files(android.getBootClasspath().join(File.pathSeparator))
+}
+
+task javadocJar(type: Jar, dependsOn: javadoc) {
+    classifier = 'javadoc'
+    from javadoc.destinationDir
+}
+artifacts {
+    archives javadocJar
+    archives sourcesJar
+}
+
+task findConventions << {
+    println project.getConvention()
 }

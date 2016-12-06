@@ -12,7 +12,6 @@ import android.content.SharedPreferences;
 
 /**
  * @author niravt (Nirav Tukadiya)
- *         <p/>
  *         Created on 20/5/16 7:19 PM.
  */
 

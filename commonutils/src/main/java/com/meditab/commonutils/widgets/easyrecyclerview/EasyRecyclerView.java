@@ -274,10 +274,10 @@ public class EasyRecyclerView<T extends BaseAdapter> extends LinearLayout implem
 
 
     /**
-     * Set an Adapter to {@link RecyclerView}
+     * Set an Adapter to RecyclerView
      *
-     * @param adapter       adapter to be set to {@link RecyclerView}
-     * @param layoutManager layout manager to be set to {@link RecyclerView}
+     * parameter adapter       adapter to be set to RecyclerView
+     * parameter layoutManager layout manager to be set to RecyclerView
      */
     public void setAdapter(T adapter, LinearLayoutManager layoutManager) {
         setUpLoadMore(layoutManager);
@@ -303,7 +303,8 @@ public class EasyRecyclerView<T extends BaseAdapter> extends LinearLayout implem
     /**
      * Shows Loading
      *
-     * @param loadingMore If set to true, shows ProgressBar at the end of {@link RecyclerView } contents, else shows ProgressBar in center of layout.
+     * parameter loadingMore If set to true, shows ProgressBar at the end of RecyclerView
+     * contents, else shows ProgressBar in center of layout.
      */
     public void startLoading(boolean loadingMore) {
         changeState(loadingMore ? LoadingState.LOADING_STARTED_LOAD_MORE : LoadingState.LOADING_STARTED);
@@ -313,7 +314,8 @@ public class EasyRecyclerView<T extends BaseAdapter> extends LinearLayout implem
     /**
      * Hides Loading
      *
-     * @param hasData If set to true, shows {@link RecyclerView } contents, else shows EmptyView with 'Message', 'Icon' and 'Label'.
+     * parameter hasData If set to true, shows RecyclerView contents, else shows EmptyView
+     * with 'Message', 'Icon' and 'Label'.
      */
     public void stopLoading(boolean hasData) {
         changeState(hasData ? LoadingState.LOADING_COMPLETE : LoadingState.NO_DATA);
@@ -443,7 +445,7 @@ public class EasyRecyclerView<T extends BaseAdapter> extends LinearLayout implem
     }
 
     /**
-     * Notify {@link android.support.v7.widget.RecyclerView.Adapter content has changed}
+     * Notify
      */
     public void notifyDataSetChanged() {
         if (listAdapter != null) {
@@ -466,28 +468,28 @@ public class EasyRecyclerView<T extends BaseAdapter> extends LinearLayout implem
 
 
     /**
-     * @param mERVOnLoadMoreClickListener ERVOnLoadMoreClickListener
+     * param mERVOnLoadMoreClickListener ERVOnLoadMoreClickListener
      */
     public void setOnLoadMoreClickListener(ERVOnLoadMoreClickListener mERVOnLoadMoreClickListener) {
         this.mERVOnLoadMoreClickListener = mERVOnLoadMoreClickListener;
     }
 
     /**
-     * @param ERVOnRefreshListener ERVOnRefreshListener
+     * param ERVOnRefreshListener ERVOnRefreshListener
      */
     public void setOnRefreshListener(ERVOnRefreshListener ERVOnRefreshListener) {
         this.mERVOnRefreshListener = ERVOnRefreshListener;
     }
 
     /**
-     * @param strLoadingText text to be shown while loading
+     * param strLoadingText text to be shown while loading
      */
     public void setStrLoadingText(String strLoadingText) {
         this.strLoadingText = strLoadingText;
     }
 
     /**
-     * @param strNodataMsg message to be shown if {@link RecyclerView}  contents are empty
+     * param: strNodataMsg message to be shown if RecyclerView  contents are empty
      */
     public void setStrNodataMsg(String strNodataMsg) {
         this.strNodataMsg = strNodataMsg;
@@ -497,7 +499,7 @@ public class EasyRecyclerView<T extends BaseAdapter> extends LinearLayout implem
     }
 
     /**
-     * @param strRetryText Text to be shown to EmptyView's Label
+     * param strRetryText Text to be shown to EmptyView's Label
      */
     public void setStrRetryText(String strRetryText) {
         this.strRetryText = strRetryText;
@@ -507,21 +509,21 @@ public class EasyRecyclerView<T extends BaseAdapter> extends LinearLayout implem
     }
 
     /**
-     * @param retryIcon ImameResource to be set to EmptyView
+     * param retryIcon ImameResource to be set to EmptyView
      */
     public void setRetryIcon(int retryIcon) {
         this.retryIcon = retryIcon;
     }
 
     /**
-     * @param itemDecoration ItemDecoration
+     * param itemDecoration ItemDecoration
      */
     public void setItemDecoration(RecyclerView.ItemDecoration itemDecoration) {
         this.itemDecoration = itemDecoration;
     }
 
     /**
-     * @param itemAnimator ItemAnimator
+     * param itemAnimator ItemAnimator
      */
     public void setItemAnimator(RecyclerView.ItemAnimator itemAnimator) {
         this.itemAnimator = itemAnimator;

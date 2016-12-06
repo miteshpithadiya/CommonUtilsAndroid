@@ -19,7 +19,6 @@ import com.meditab.commonutils.R;
 
 /**
  * @author niravt (Nirav Tukadiya)
- *         <p/>
  *         Created on 8/6/16 7:47 PM.
  */
 
