@@ -16,7 +16,7 @@ import android.view.View;
  * Created by niravtukadiya on 12/12/16.
  */
 
-public class EasyNotify {
+public class MtNotificationUtils {
 
     public static void showExpandableNotification(Context context, String contentTitle, String contentText, String bigTitle, String[] contentArr, int smallIcon, int largeIcon, PendingIntent pendingIntent, boolean showInWatch, NotificationAction[] notificationActions, int notificationId) {
 
@@ -26,7 +26,7 @@ public class EasyNotify {
             id = notificationId;
         }
 
-        Log.e("EasyNotify", "showExpandableNotification");
+        Log.e("MtNotificationUtils", "showExpandableNotification");
         NotificationManager mNotificationManager = getNotificationManager(context);
 
         if (android.os.Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {
@@ -137,7 +137,7 @@ public class EasyNotify {
             id = notificationId;
         }
 
-        Log.e("EasyNotify", "showExpandableNotification");
+        Log.e("MtNotificationUtils", "showExpandableNotification");
         NotificationManager mNotificationManager = getNotificationManager(context);
 
         if (android.os.Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN) {

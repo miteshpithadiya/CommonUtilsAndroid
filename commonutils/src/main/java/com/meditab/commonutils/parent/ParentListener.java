@@ -9,7 +9,7 @@ package com.meditab.commonutils.parent;
  */
 public interface ParentListener {
 
-    void onInternetNotAvailable();
+    void onNoInternetAvailable();
 
     void onShowProgressDialog(String message);
 

@@ -126,6 +126,6 @@ public class MtDeviceUtils {
     }
 
     public static String getDeviceName() {
-        return NullUtils.getNotNullStringValue(Build.MANUFACTURER) + " - " + NullUtils.getNotNullStringValue(Build.MODEL);
+        return MtNullUtils.getNotNullStringValue(Build.MANUFACTURER) + " - " + MtNullUtils.getNotNullStringValue(Build.MODEL);
     }
 }

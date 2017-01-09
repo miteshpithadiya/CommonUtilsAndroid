@@ -27,7 +27,7 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.meditab.commonutils.R;
-import com.meditab.commonutils.base.BaseAdapter;
+import com.meditab.commonutils.parent.ParentAdapter;
 import com.meditab.commonutils.exceptions.ImplementationException;
 
 /**
@@ -37,7 +37,7 @@ import com.meditab.commonutils.exceptions.ImplementationException;
  * niravt@meditab.com
  * Created on 6/23/16 8:22 PM
  */
-public class EasyRecyclerView<T extends BaseAdapter> extends LinearLayout implements SwipeRefreshLayout.OnRefreshListener, View.OnClickListener {
+public class EasyRecyclerView<T extends ParentAdapter> extends LinearLayout implements SwipeRefreshLayout.OnRefreshListener, View.OnClickListener {
 
     /**
      * Layout Ids

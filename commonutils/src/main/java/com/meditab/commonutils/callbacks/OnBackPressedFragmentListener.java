@@ -7,8 +7,8 @@
 
 package com.meditab.commonutils.callbacks;
 
-import com.meditab.commonutils.base.BaseDialogFragment;
-import com.meditab.commonutils.base.BaseFragment;
+import com.meditab.commonutils.parent.ParentDialogFragment;
+import com.meditab.commonutils.parent.ParentFragment;
 
 /**
  * @author niravt (Nirav Tukadiya)
@@ -17,7 +17,7 @@ import com.meditab.commonutils.base.BaseFragment;
  */
 
 public interface OnBackPressedFragmentListener extends OnBackPressedListener {
-    void setCurrentFragment(BaseFragment currentFragment);
+    void setCurrentFragment(ParentFragment currentFragment);
 
-    void setCurrentFragment(BaseDialogFragment currentFragment);
+    void setCurrentFragment(ParentDialogFragment currentFragment);
 }
