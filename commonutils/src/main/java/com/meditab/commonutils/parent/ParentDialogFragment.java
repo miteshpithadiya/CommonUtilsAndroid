@@ -82,7 +82,7 @@ public abstract class ParentDialogFragment<T> extends DialogFragment {
     }
 
     public boolean showAsDialog() {
-        return ParentApplication.isTablet();
+        return false;
     }
 
     public boolean onBackPressHandled() {

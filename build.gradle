@@ -15,8 +15,6 @@ buildscript {
     }
 }
 
-project.extensions.add("LIBRARY_VERSION", "1.1")
-
 allprojects {
     repositories {
         jcenter()
