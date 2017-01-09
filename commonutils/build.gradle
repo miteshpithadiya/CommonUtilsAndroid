@@ -8,6 +8,11 @@
 apply plugin: 'com.android.library'
 apply plugin: 'com.neenbedankt.android-apt'
 
+
+Properties gProp = new Properties()
+gProp.load(project.rootProject.file('gradle.properties').newDataInputStream())
+
+
 ext {
     bintrayRepo = 'maven'
     bintrayName = 'common-utils'
@@ -21,7 +26,7 @@ ext {
     siteUrl = 'http://mgit.meditab.local/Devmobtl/commonutils-android'
     gitUrl = 'http://mgit.meditab.local/Devmobtl/commonutils-android.git'
 
-    libraryVersion = '1.0'
+    libraryVersion = gProp.getProperty(LIBRARY_VERSION)
 
     developerId = 'miteshpithadiya'
     developerName = 'Mitesh Pithadiya'
@@ -31,6 +36,8 @@ ext {
     licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
     allLicenses = ["Apache-2.0"]
 }
+
+
 
 def siteUrl = 'http://mgit.meditab.local/Devmobtl/commonutils-android'
 def gitUrl = 'http://mgit.meditab.local/Devmobtl/commonutils-android.git'
@@ -43,7 +50,7 @@ android {
         minSdkVersion 15
         targetSdkVersion 24
         versionCode 110
-        versionName "1.1"
+        versionName gProp.getProperty(LIBRARY_VERSION)
     }
     buildTypes {
         release {
@@ -58,7 +65,7 @@ properties.load(project.rootProject.file('local.properties').newDataInputStream(
 
 apply plugin: 'com.jfrog.bintray'
 
-version = "1.1"
+version = gProp.getProperty(LIBRARY_VERSION)
 
 bintray {
     user = properties.getProperty("bintray.user")
