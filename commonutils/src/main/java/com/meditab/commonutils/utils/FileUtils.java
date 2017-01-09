@@ -50,8 +50,8 @@ import java.util.List;
  * {@link #writeFile(String, InputStream, boolean)} write file
  * {@link #writeFile(File, InputStream)} write file
  * {@link #writeFile(File, InputStream, boolean)} write file
- * 
- * 
+ * <p/>
+ * <p/>
  * Operate file
  * {@link #copyFile(String, String)}
  * {@link #getFileExtension(String)}
@@ -64,7 +64,7 @@ import java.util.List;
  * {@link #makeFolders(String)}
  * {@link #makeDirs(String)}
  *
- * @author jingle1267@163.com
+ * @author niravt@meditab.com
  */
 public final class FileUtils {
 
@@ -104,7 +104,7 @@ public final class FileUtils {
 
     /**
      * Recursive delete files and folders
-     * 
+     * <p/>
      * param File you want to delete the root directory
      */
     public static void DeleteFile(File file) {
@@ -234,7 +234,7 @@ public final class FileUtils {
 
     /**
      * File is used to locate the folder recursively following qualifying
-     * 
+     * <p/>
      * param Folder folder
      * param Filter file filter
      * return Eligible files List
@@ -283,7 +283,7 @@ public final class FileUtils {
 
     /**
      * Explorer, locate the folder of files and directories
-     * 
+     * <p/>
      * param Folder folder
      * param Filter file filter
      * return Qualifying List
@@ -335,7 +335,7 @@ public final class FileUtils {
 
     /**
      * :"^.*\\.(mp3|mp4|3gp)$"
-     * 
+     * <p/>
      * param Reg currently allow the value REG_MTV, REG_MP3, REG_JPG three kinds
      * return File filters
      */
@@ -365,7 +365,7 @@ public final class FileUtils {
 
     /**
      * read file
-     * 
+     * <p/>
      * param FilePath the file path
      *
      * @param charsetName The name of a supported {@link java.nio.charset.Charset
@@ -409,7 +409,7 @@ public final class FileUtils {
 
     /**
      * write file
-     * 
+     * <p/>
      * param FilePath the file path
      *
      * @param content content
@@ -446,7 +446,7 @@ public final class FileUtils {
 
     /**
      * write file
-     * 
+     * <p/>
      * param FilePath the file path
      *
      * @param contentList contentList
@@ -489,7 +489,7 @@ public final class FileUtils {
 
     /**
      * write file, the string will be written to the begin of the file
-     * 
+     * <p/>
      * param FilePath the file path
      *
      * @param content content
@@ -501,7 +501,7 @@ public final class FileUtils {
 
     /**
      * write file, the string list will be written to the begin of the file
-     * 
+     * <p/>
      * param FilePath the file path
      *
      * @param contentList contentList
@@ -513,7 +513,7 @@ public final class FileUtils {
 
     /**
      * write file, the bytes will be written to the begin of the file
-     * 
+     * <p/>
      * param FilePath the file path
      *
      * @param stream InputStream
@@ -591,7 +591,7 @@ public final class FileUtils {
 
     /**
      * copy file
-     * 
+     * <p/>
      * param SourceFilePath source file path
      * param DestFilePath destination file path
      * return Execution results
@@ -610,7 +610,7 @@ public final class FileUtils {
 
     /**
      * Enter the transfer byte []
-     * 
+     * <p/>
      * param Instream InputStream
      *
      * @return ByteArray
@@ -633,7 +633,7 @@ public final class FileUtils {
 
     /**
      * read file to string list, a element of list is a line
-     * 
+     * <p/>
      * param FilePath the file path
      * param CharsetName encoding
      * The name of a supported {@link java.nio.charset.Charset
@@ -676,8 +676,8 @@ public final class FileUtils {
 
     /**
      * get file name from path, not include suffix
-     * 
-     * 
+     * <p/>
+     * <p/>
      * getFileNameWithoutExtension(null)               =   null
      * getFileNameWithoutExtension("")                 =   ""
      * getFileNameWithoutExtension("   ")              =   "   "
@@ -690,8 +690,8 @@ public final class FileUtils {
      * getFileNameWithoutExtension("c:a.txt\\a")        =   "a"
      * getFileNameWithoutExtension("/home/admin")      =   "admin"
      * getFileNameWithoutExtension("/home/admin/a.txt/b.mp3")  =   "b"
-     * 
-     * 
+     * <p/>
+     * <p/>
      * param FilePath the file path
      *
      * @return file name from path, not include suffix
@@ -716,8 +716,8 @@ public final class FileUtils {
 
     /**
      * get file name from path, include suffix
-     * 
-     * 
+     * <p/>
+     * <p/>
      * getFileName(null)               =   null
      * getFileName("")                 =   ""
      * getFileName("   ")              =   "   "
@@ -730,8 +730,8 @@ public final class FileUtils {
      * getFileName("c:a.txt\\a")        =   "a"
      * getFileName("/home/admin")      =   "admin"
      * getFileName("/home/admin/a.txt/b.mp3")  =   "b.mp3"
-     * 
-     * 
+     * <p/>
+     * <p/>
      * param FilePath the file path
      *
      * @return file name from path, include suffix
@@ -747,8 +747,8 @@ public final class FileUtils {
 
     /**
      * get folder name from path
-     * 
-     * 
+     * <p/>
+     * <p/>
      * getFolderName(null)               =   null
      * getFolderName("")                 =   ""
      * getFolderName("   ")              =   ""
@@ -762,8 +762,8 @@ public final class FileUtils {
      * getFolderName("c:a\\b\\c\\d.txt")    =   "c:a\\b\\c"
      * getFolderName("/home/admin")      =   "/home"
      * getFolderName("/home/admin/a.txt/b.mp3")  =   "/home/admin/a.txt"
-     * 
-     * 
+     * <p/>
+     * <p/>
      * param FilePath the file path
      * return Folder name
      */
@@ -779,8 +779,8 @@ public final class FileUtils {
 
     /**
      * get suffix of file from path
-     * 
-     * 
+     * <p/>
+     * <p/>
      * getFileExtension(null)               =   ""
      * getFileExtension("")                 =   ""
      * getFileExtension("   ")              =   "   "
@@ -794,8 +794,8 @@ public final class FileUtils {
      * getFileExtension("/home/admin")      =   ""
      * getFileExtension("/home/admin/a.txt/b")  =   ""
      * getFileExtension("/home/admin/a.txt/b.mp3")  =   "mp3"
-     * 
-     * 
+     * <p/>
+     * <p/>
      * param FilePath the file path
      *
      * @return
@@ -851,7 +851,7 @@ public final class FileUtils {
 
     /**
      * Indicates if this file represents a file on the underlying file system.
-     * 
+     * <p/>
      * param FilePath the file path
      * return The existence of the file
      */
@@ -867,7 +867,7 @@ public final class FileUtils {
     /**
      * Indicates if this file represents a directory on the underlying file
      * system.
-     * 
+     * <p/>
      * param DirectoryPath folder path
      * return Folder exists
      */

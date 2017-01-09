@@ -31,7 +31,7 @@ import java.util.Stack;
 
 /**
  * @author niravt (Nirav Tukadiya)
- *
+ *         <p/>
  *         Created on 8/6/16 12:48 PM.
  */
 
@@ -196,7 +196,7 @@ public class BaseActivity<T> extends AppCompatActivity implements FragmentLoader
 
     /**
      * Disable overriding of Activity's default onBackPressed().
-     *
+     * <p/>
      * Calls super's onBackPressed() if it wasn't handled by bActivity
      */
     @Override

@@ -19,17 +19,11 @@ import org.jetbrains.annotations.NotNull;
 /**
  * Snackbars
  *
- * @author Romac
+ * @author NiravT
  */
-public class SnackBarUtils {
+public class MtSnackBarUtils {
 
-    Context mContext;
-
-    public SnackBarUtils() {
-    }
-
-    public SnackBarUtils(Context mContext) {
-        this.mContext = mContext;
+    private MtSnackBarUtils() {
     }
 
 
@@ -37,11 +31,11 @@ public class SnackBarUtils {
      * @param activity: calling bActivity
      * @param message:  message inside snackbar
      */
-    public Snackbar getSnackbar(@NotNull Activity activity, final String message) {
+    public static Snackbar getSnackbar(Context mContext, @NotNull Activity activity, final String message) {
         final View content = activity.getWindow().getDecorView().findViewById(android.R.id.content);
         if (content == null)
             return null;
-        return createSnackBar(message, null, null, content, Snackbar.LENGTH_SHORT);
+        return createSnackBar(mContext, message, null, null, content, Snackbar.LENGTH_SHORT);
 
     }
 
@@ -50,12 +44,12 @@ public class SnackBarUtils {
      * @param message:  message inside snackbar
      * @param length:   determine for how long the snackbar will be shown
      */
-    public Snackbar getSnackbar(@NotNull Activity activity, final String message, int
+    public static Snackbar getSnackbar(Context mContext, @NotNull Activity activity, final String message, int
             length) {
         final View content = activity.getWindow().getDecorView().findViewById(android.R.id.content);
         if (content == null)
             return null;
-        return createSnackBar(message, null, null, content, length);
+        return createSnackBar(mContext, message, null, null, content, length);
 
     }
 
@@ -66,13 +60,13 @@ public class SnackBarUtils {
      * @param action:        action inside snackbar
      * @param clickListener: click listener for action item inside snackbar
      */
-    public Snackbar getSnackbar(@NotNull Activity activity, final String message, String
+    public static Snackbar getSnackbar(Context mContext, @NotNull Activity activity, final String message, String
             action, View
-                                        .OnClickListener clickListener) {
+                                               .OnClickListener clickListener) {
         final View content = activity.getWindow().getDecorView().findViewById(android.R.id.content);
         if (content == null)
             return null;
-        return createSnackBar(message, action, clickListener, content, Snackbar.LENGTH_SHORT);
+        return createSnackBar(mContext, message, action, clickListener, content, Snackbar.LENGTH_SHORT);
     }
 
     /**
@@ -81,14 +75,14 @@ public class SnackBarUtils {
      * @param action:        action inside snackbar
      * @param clickListener: click listener for action item inside snackbar
      */
-    public Snackbar getSnackbar(@NotNull Activity activity, final String message, String
+    public static Snackbar getSnackbar(Context mContext, @NotNull Activity activity, final String message, String
             action, View
-                                        .OnClickListener
-                                        clickListener, int length) {
+                                               .OnClickListener
+                                               clickListener, int length) {
         final View content = activity.getWindow().getDecorView().findViewById(android.R.id.content);
         if (content == null)
             return null;
-        return createSnackBar(message, action, clickListener, content, length);
+        return createSnackBar(mContext, message, action, clickListener, content, length);
     }
 
 
@@ -99,9 +93,9 @@ public class SnackBarUtils {
      * @param clickListener: click listener for action item inside snackbar
      * @param length:        determines for how long the snackbar will be visible
      */
-    public Snackbar getSnackbar(View view, String msg, String action, View.OnClickListener
+    public static Snackbar getSnackbar(Context mContext, View view, String msg, String action, View.OnClickListener
             clickListener, int length) {
-        return createSnackBar(msg, action, clickListener, view, length);
+        return createSnackBar(mContext, msg, action, clickListener, view, length);
     }
 
     /**
@@ -111,7 +105,7 @@ public class SnackBarUtils {
      * @param action:        action inside snackbar
      * @param clickListener: click listener for action item inside snackbar
      */
-    private Snackbar createSnackBar(String message, String action, View.OnClickListener
+    private static Snackbar createSnackBar(Context mContext, String message, String action, View.OnClickListener
             clickListener, View content, int length) {
         Snackbar snackbar = Snackbar.make(content, message, length);
         if (action != null) {
@@ -129,13 +123,11 @@ public class SnackBarUtils {
             e.printStackTrace();
         }
 
-
         try {
             snackbar.setActionTextColor(Color.parseColor("#F39E55"));
         } catch (Exception e) {
             e.printStackTrace();
         }
-
 
         return snackbar;
     }

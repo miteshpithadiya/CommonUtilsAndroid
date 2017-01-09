@@ -16,34 +16,21 @@ import android.content.SharedPreferences;
  *         Created on 20/5/16 7:19 PM.
  */
 
-public class SharedPrefUtils {
+public class MtSharedPrefUtils {
 
     //pref file database.xml
     //TODO place in constants file
 
-    public static final String PREF_FILE_DATABASE = "database";
-    public static final String PREF_FILE_FIREBASE = "firebase";
-
-    //keys for database.xml
-
-    public static final String PREF_KEY_DB_VERSION = "db_version";
-    public static final String PREF_KEY_DB_LEVEL = "db_level";
-
     public static final String PREF_FILE_DEFAULT = "default";
 
-    private Context mContext;
-
-    public SharedPrefUtils(Context context) {
-        this.mContext = context;
-    }
 
     /**
      * @param prefsKey:   key of the preference object
      * @param prefsValue: value of the preference object
      */
-    public void setValue(String prefsKey, String
+    public static void setValue(Context context, String prefsKey, String
             prefsValue) {
-        SharedPreferences.Editor editor = getPrefsEditor(mContext, PREF_FILE_DEFAULT);
+        SharedPreferences.Editor editor = getPrefsEditor(context, PREF_FILE_DEFAULT);
         editor.putString(prefsKey, prefsValue);
         editor.commit();
     }
@@ -52,9 +39,9 @@ public class SharedPrefUtils {
      * @param prefsKey:   key of the preference object
      * @param prefsValue: value of the preference object
      */
-    public void setValue(String prefsKey, int
+    public static void setValue(Context context, String prefsKey, int
             prefsValue) {
-        SharedPreferences.Editor editor = getPrefsEditor(mContext, PREF_FILE_DEFAULT);
+        SharedPreferences.Editor editor = getPrefsEditor(context, PREF_FILE_DEFAULT);
         editor.putInt(prefsKey, prefsValue);
         editor.commit();
     }
@@ -63,8 +50,8 @@ public class SharedPrefUtils {
      * @param prefsKey:   key of the preference object
      * @param prefsValue: value of the preference object
      */
-    public void setValue(String prefsKey, boolean prefsValue) {
-        SharedPreferences.Editor editor = getPrefsEditor(mContext, PREF_FILE_DEFAULT);
+    public static void setValue(Context context, String prefsKey, boolean prefsValue) {
+        SharedPreferences.Editor editor = getPrefsEditor(context, PREF_FILE_DEFAULT);
         editor.putBoolean(prefsKey, prefsValue);
         editor.commit();
     }
@@ -74,9 +61,9 @@ public class SharedPrefUtils {
      * @param prefsValue:  value of the preference object
      * @param strFileName: preference file name
      */
-    public void setValue(String prefsKey, String
+    public static void setValue(Context context, String prefsKey, String
             prefsValue, String strFileName) {
-        SharedPreferences.Editor editor = getPrefsEditor(mContext, strFileName);
+        SharedPreferences.Editor editor = getPrefsEditor(context, strFileName);
         editor.putString(prefsKey, prefsValue);
         editor.commit();
     }
@@ -86,9 +73,9 @@ public class SharedPrefUtils {
      * @param prefsValue:  value of the preference object
      * @param strFileName: preference file name
      */
-    public void setValue(String prefsKey, int
+    public static void setValue(Context context, String prefsKey, int
             prefsValue, String strFileName) {
-        SharedPreferences.Editor editor = getPrefsEditor(mContext, strFileName);
+        SharedPreferences.Editor editor = getPrefsEditor(context, strFileName);
         editor.putInt(prefsKey, prefsValue);
         editor.commit();
     }
@@ -98,9 +85,9 @@ public class SharedPrefUtils {
      * @param prefsValue:  value of the preference object
      * @param strFileName: preference file name
      */
-    public void setValue(String prefsKey, boolean
+    public static void setValue(Context context, String prefsKey, boolean
             prefsValue, String strFileName) {
-        SharedPreferences.Editor editor = getPrefsEditor(mContext, strFileName);
+        SharedPreferences.Editor editor = getPrefsEditor(context, strFileName);
         editor.putBoolean(prefsKey, prefsValue);
         editor.commit();
     }
@@ -110,9 +97,9 @@ public class SharedPrefUtils {
      * @param defaultValue: default value of the object
      * @return preference string
      */
-    public String getValue(String key, String
+    public static String getValue(Context context, String key, String
             defaultValue) {
-        SharedPreferences sp = getPreferences(mContext, PREF_FILE_DEFAULT);
+        SharedPreferences sp = getPreferences(context, PREF_FILE_DEFAULT);
         return sp.getString(key, defaultValue);
     }
 
@@ -121,9 +108,9 @@ public class SharedPrefUtils {
      * @param defaultValue: default value of the object
      * @return preference boolean
      */
-    public boolean getValue(String key, boolean
+    public static boolean getValue(Context context, String key, boolean
             defaultValue) {
-        SharedPreferences sp = getPreferences(mContext, PREF_FILE_DEFAULT);
+        SharedPreferences sp = getPreferences(context, PREF_FILE_DEFAULT);
         return sp.getBoolean(key, defaultValue);
     }
 
@@ -132,9 +119,9 @@ public class SharedPrefUtils {
      * @param defaultValue: default value of the object
      * @return preference integer
      */
-    public int getValue(String key, int
+    public static int getValue(Context context, String key, int
             defaultValue) {
-        SharedPreferences sp = getPreferences(mContext, PREF_FILE_DEFAULT);
+        SharedPreferences sp = getPreferences(context, PREF_FILE_DEFAULT);
         return sp.getInt(key, defaultValue);
     }
 
@@ -144,9 +131,9 @@ public class SharedPrefUtils {
      * @param strFileName:  Name of Preference file
      * @return preference string
      */
-    public String getValue(String key, String
+    public static String getValue(Context context, String key, String
             defaultValue, String strFileName) {
-        SharedPreferences sp = getPreferences(mContext, strFileName);
+        SharedPreferences sp = getPreferences(context, strFileName);
         return sp.getString(key, defaultValue);
     }
 
@@ -156,9 +143,9 @@ public class SharedPrefUtils {
      * @param strFileName:  Name of Preference file
      * @return preference boolean
      */
-    public boolean getValue(String key, boolean
+    public static boolean getValue(Context context, String key, boolean
             defaultValue, String strFileName) {
-        SharedPreferences sp = getPreferences(mContext, strFileName);
+        SharedPreferences sp = getPreferences(context, strFileName);
         return sp.getBoolean(key, defaultValue);
     }
 
@@ -168,34 +155,47 @@ public class SharedPrefUtils {
      * @param strFileName:  Name of Preference file
      * @return preference integer
      */
-    public int getValue(String key, int
+    public static int getValue(Context context, String key, int
             defaultValue, String strFileName) {
-        SharedPreferences sp = getPreferences(mContext, strFileName);
+        SharedPreferences sp = getPreferences(context, strFileName);
         return sp.getInt(key, defaultValue);
     }
 
     /**
-     * @param mContext:          bContext of the calling bActivity
+     * @param context:           bContext of the calling bActivity
      * @param strPreferenceFile: Shared Preferences File Name
      * @return SharedPreferences
      */
-    private SharedPreferences.Editor getPrefsEditor(Context mContext,
-                                                    String strPreferenceFile) {
+    private static SharedPreferences.Editor getPrefsEditor(Context context,
+                                                           String strPreferenceFile) {
 
-        SharedPreferences sharedPreferences = mContext.getSharedPreferences(strPreferenceFile,
+        SharedPreferences sharedPreferences = context.getSharedPreferences(strPreferenceFile,
                 Context.MODE_PRIVATE);
 
         return sharedPreferences.edit();
     }
 
     /**
-     * @param mContext:          bContext of the calling bActivity
+     * @param context:           bContext of the calling bActivity
      * @param strPreferenceFile: Shared Preferences File Name
      * @return SharedPreferences
      */
-    private SharedPreferences getPreferences(Context mContext,
-                                             String strPreferenceFile) {
-        return mContext.getSharedPreferences(strPreferenceFile, Context.MODE_PRIVATE);
+    private static SharedPreferences getPreferences(Context context,
+                                                    String strPreferenceFile) {
+        return context.getSharedPreferences(strPreferenceFile, Context.MODE_PRIVATE);
+    }
+
+
+    /**
+     * clear pref file
+     *
+     * @param context
+     * @param strFileName pref file name to be cleared
+     */
+    public static void clearPrefFile(Context context, String strFileName) {
+        SharedPreferences.Editor editor = getPrefsEditor(context, strFileName);
+        editor.clear();
+        editor.commit();
     }
 
 }

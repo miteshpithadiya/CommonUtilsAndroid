@@ -14,6 +14,7 @@ import android.text.TextUtils;
 
 /**
  * @author niravt (Nirav Tukadiya)
+ *         <p/>
  *         Created on 24/5/16 7:37 PM.
  */
 public class Common {

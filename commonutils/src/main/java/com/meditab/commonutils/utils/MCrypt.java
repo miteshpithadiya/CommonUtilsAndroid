@@ -116,6 +116,7 @@ public class MCrypt {
     /**
      * Method which converts bytes to hexadecimal
      *
+     * @param : byte array
      * @return : String object
      */
     public static String bytesToHex(byte[] b) {
